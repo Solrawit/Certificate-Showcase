@@ -19,7 +19,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em; /* เพิ่มขนาดของหัวข้อใน header */
 }
 
 main {
@@ -31,7 +31,7 @@ main {
 
 .certificate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* เพิ่มขนาดขั้นต่ำ */
     gap: 30px;
 }
 
@@ -39,21 +39,21 @@ main {
     background: white;
     border: 1px solid #ddd;
     border-radius: 12px;
-    padding: 30px;
+    padding: 40px; /* เพิ่ม padding */
     text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .certificate:hover {
-    transform: scale(1.07);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1); /* เพิ่มขนาดเมื่อโฮเวอร์ */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* เพิ่มความเข้มของเงาเมื่อโฮเวอร์ */
 }
 
 .certificate h2 {
     margin-top: 0;
     color: #333;
-    font-size: 1.8em;
+    font-size: 2em; /* เพิ่มขนาดของหัวข้อในการ์ด */
 }
 
 .certificate-image {
@@ -63,17 +63,17 @@ main {
 .certificate-image img {
     max-width: 100%;
     height: auto;
-    border: 3px solid #007bff;
+    border: 4px solid #007bff; /* เพิ่มขนาดของกรอบภาพ */
     border-radius: 8px;
     transition: border-color 0.3s;
 }
 
 .certificate-image img:hover {
-    border-color: #0056b3;
+    border-color: #0056b3; /* เปลี่ยนสีกรอบเมื่อโฮเวอร์ */
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* เพิ่มขนาดของข้อความในการ์ด */
     color: #666;
 }
 
