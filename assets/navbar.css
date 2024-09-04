@@ -1,0 +1,47 @@
+/* navbar.css */
+.navbar {
+    background: #007bff;
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.navbar-brand a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* เพิ่มช่องว่างระหว่างลิงก์ */
+}
+
+.navbar-list li {
+    margin: 0;
+}
+
+.navbar-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar-list a:hover {
+    background: #0056b3;
+    color: #ffffff;
+}
