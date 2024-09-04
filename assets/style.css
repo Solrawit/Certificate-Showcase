@@ -4,52 +4,56 @@ body {
     padding: 0;
     background: #f0f2f5;
     color: #333;
+    min-height: 100vh; /* ให้แน่ใจว่าร่างกายเต็มความสูง */
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
-    padding: 30px 0; /* เพิ่ม padding เพื่อขยายพื้นที่ของ header */
+    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em; /* เพิ่มขนาดของหัวข้อ */
+    font-size: 2em;
 }
 
 main {
-    padding: 30px; /* เพิ่ม padding เพื่อขยายพื้นที่ของ main */
+    padding: 30px;
     max-width: 1200px;
     margin: auto;
+    flex: 1; /* ให้แน่ใจว่า main ขยายเต็มพื้นที่ระหว่าง header และ footer */
 }
 
 .certificate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* เพิ่มขนาดขั้นต่ำ */
-    gap: 30px; /* เพิ่มช่องว่างระหว่างใบ Certificate */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .certificate {
     background: white;
     border: 1px solid #ddd;
     border-radius: 12px;
-    padding: 30px; /* เพิ่ม padding สำหรับพื้นที่ภายในใบ Certificate */
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .certificate:hover {
-    transform: scale(1.07); /* เพิ่มขนาดเมื่อโฮเวอร์ */
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* เพิ่มความเข้มของเงาเมื่อโฮเวอร์ */
+    transform: scale(1.07);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
 
 .certificate h2 {
     margin-top: 0;
     color: #333;
-    font-size: 1.8em; /* เพิ่มขนาดของหัวข้อภายในใบ Certificate */
+    font-size: 1.8em;
 }
 
 .certificate-image {
@@ -59,31 +63,30 @@ main {
 .certificate-image img {
     max-width: 100%;
     height: auto;
-    border: 3px solid #007bff; /* เพิ่มขนาดของกรอบภาพ */
+    border: 3px solid #007bff;
     border-radius: 8px;
     transition: border-color 0.3s;
 }
 
 .certificate-image img:hover {
-    border-color: #0056b3; /* เปลี่ยนสีกรอบเมื่อโฮเวอร์ */
+    border-color: #0056b3;
 }
 
 p {
-    font-size: 1.2em; /* เพิ่มขนาดของข้อความในใบ Certificate */
+    font-size: 1.2em;
     color: #666;
 }
 
 footer {
-    background: #007bff; /* เปลี่ยนสีพื้นหลังของ footer */
+    background: #007bff;
     color: white;
     text-align: center;
-    padding: 1px 0; /* เพิ่ม padding */
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
-    p {
-        font-size: 1.2em; /* เพิ่มขนาดของข้อความในใบ Certificate */
-        color: #ffffff;
-    }
+    padding: 15px 0; /* เพิ่ม padding ให้ footer */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0; /* กำจัด margin ของข้อความใน footer */
+    font-size: 1em; /* ขนาดของข้อความใน footer */
+    color: white;
 }
