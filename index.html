@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate Showcase</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/navbar.css">
 </head>
 <body>
-    <header>
-        <h1>Certificate Showcase</h1>
-    </header>
+    <header id="navbar-container"></header> <!-- จะถูกเติมด้วย navbar.html -->
     <main>
         <section class="certificate-grid">
             <article class="certificate">
@@ -109,5 +108,14 @@
     <footer>
         <p>&copy; 2024 Your Company</p>
     </footer>
+
+    <script>
+        // Load the navbar
+        fetch('component/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
