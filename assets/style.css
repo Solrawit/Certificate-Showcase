@@ -31,7 +31,7 @@ main {
 
 .certificate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* เพิ่มขนาดขั้นต่ำ */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* เพิ่มขนาดขั้นต่ำ */
     gap: 30px;
 }
 
@@ -39,21 +39,21 @@ main {
     background: white;
     border: 1px solid #ddd;
     border-radius: 12px;
-    padding: 40px; /* เพิ่ม padding */
+    padding: 30px; /* ขนาด padding */
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* ความเข้มของเงา */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .certificate:hover {
-    transform: scale(1.1); /* เพิ่มขนาดเมื่อโฮเวอร์ */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* เพิ่มความเข้มของเงาเมื่อโฮเวอร์ */
+    transform: scale(1.07); /* ขยายขนาดเมื่อโฮเวอร์ */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* เพิ่มความเข้มของเงาเมื่อโฮเวอร์ */
 }
 
 .certificate h2 {
     margin-top: 0;
     color: #333;
-    font-size: 2em; /* เพิ่มขนาดของหัวข้อในการ์ด */
+    font-size: 1.8em; /* ขนาดของหัวข้อในการ์ด */
 }
 
 .certificate-image {
@@ -63,7 +63,7 @@ main {
 .certificate-image img {
     max-width: 100%;
     height: auto;
-    border: 4px solid #007bff; /* เพิ่มขนาดของกรอบภาพ */
+    border: 3px solid #007bff; /* ขนาดของกรอบภาพ */
     border-radius: 8px;
     transition: border-color 0.3s;
 }
@@ -73,7 +73,7 @@ main {
 }
 
 p {
-    font-size: 1.5em; /* เพิ่มขนาดของข้อความในการ์ด */
+    font-size: 1.2em; /* ขนาดของข้อความในการ์ด */
     color: #666;
 }
 
