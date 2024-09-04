@@ -127,3 +127,29 @@ footer::before {
 footer:hover::before {
     transform: translateX(0);
 }
+/* Resume download css */
+.download-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-download:active {
+    background-color: #004494;
+}
