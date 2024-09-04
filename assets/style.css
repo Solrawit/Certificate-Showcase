@@ -9,47 +9,47 @@ body {
 header {
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
-    padding: 20px 0;
+    padding: 30px 0; /* เพิ่ม padding เพื่อขยายพื้นที่ของ header */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em; /* เพิ่มขนาดของหัวข้อ */
 }
 
 main {
-    padding: 20px;
+    padding: 30px; /* เพิ่ม padding เพื่อขยายพื้นที่ของ main */
     max-width: 1200px;
     margin: auto;
 }
 
 .certificate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* เพิ่มขนาดขั้นต่ำ */
+    gap: 30px; /* เพิ่มช่องว่างระหว่างใบ Certificate */
 }
 
 .certificate {
     background: white;
     border: 1px solid #ddd;
     border-radius: 12px;
-    padding: 20px;
+    padding: 30px; /* เพิ่ม padding สำหรับพื้นที่ภายในใบ Certificate */
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .certificate:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: scale(1.07); /* เพิ่มขนาดเมื่อโฮเวอร์ */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* เพิ่มความเข้มของเงาเมื่อโฮเวอร์ */
 }
 
 .certificate h2 {
     margin-top: 0;
     color: #333;
-    font-size: 1.5em;
+    font-size: 1.8em; /* เพิ่มขนาดของหัวข้อภายในใบ Certificate */
 }
 
 .certificate-image {
@@ -59,27 +59,31 @@ main {
 .certificate-image img {
     max-width: 100%;
     height: auto;
-    border: 2px solid #007bff;
+    border: 3px solid #007bff; /* เพิ่มขนาดของกรอบภาพ */
     border-radius: 8px;
     transition: border-color 0.3s;
 }
 
 .certificate-image img:hover {
-    border-color: #0056b3;
+    border-color: #0056b3; /* เปลี่ยนสีกรอบเมื่อโฮเวอร์ */
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.2em; /* เพิ่มขนาดของข้อความในใบ Certificate */
     color: #666;
 }
 
 footer {
-    background: #007bff;
+    background: #007bff; /* เปลี่ยนสีพื้นหลังของ footer */
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 1px 0; /* เพิ่ม padding */
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มความเข้มของเงา */
+    p {
+        font-size: 1.2em; /* เพิ่มขนาดของข้อความในใบ Certificate */
+        color: #ffffff;
+    }
 }
