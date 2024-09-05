@@ -1,0 +1,155 @@
+/* about.css */
+.about-intro {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+    border-bottom: 5px solid #007bff; /* เพิ่มเส้นขอบด้านล่าง */
+    transition: background-color 0.3s ease;
+}
+
+.about-intro img {
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+    border: 3px solid #007bff; /* เพิ่มกรอบสี */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-intro h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 20px 0;
+    transition: color 0.3s ease;
+}
+
+.about-intro h1:hover {
+    color: #007bff;
+}
+
+.about-intro p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: color 0.3s ease;
+}
+
+.about-intro p:hover {
+    color: #444;
+}
+
+.info-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.info-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: calc(50% - 20px); /* กว้าง 50% ของพื้นที่แต่ละกล่อง */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.info-box h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+    transition: color 0.3s ease;
+}
+
+.info-box h2:hover {
+    color: #007bff;
+}
+
+.info-box ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.info-box ul li {
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.info-box ul li:hover {
+    color: #007bff;
+}
+
+.info-box a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-box a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Add animation to the footer */
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #0056b3;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+footer:hover::before {
+    transform: translateX(0);
+}
+/* Resume download css */
+.download-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #2b2b2b;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.btn-download:active {
+    background-color: #000000;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/navbar.css">
+    <link rel="stylesheet" href="/assets/about.css">
+    <style>
+       /* Background container */
+.background {
+    background-image: url('/image/codebg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(6px); /* Apply blur effect to the background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Set background behind the content */
+    height: 100vh;
+}
+
+/* Foreground content */
+.content {
+    position: relative;
+    z-index: 1; /* Set content above the background */
+    padding: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Include navbar -->
+    <header id="navbar-container"></header>
+    <div class="background"></div>
+    <main>
+        <section class="about-intro">
+            <img src="/image/profile.jpg" alt="imgprofile">
+            <h1>About Us &#9658;</h1>
+            <div>
+                <h2>Solrawit Chungchoo</h2>
+                <h3>นาย สรวิชญ์ ช่วงชู</h3>
+                <p>มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</p>
+                <p>Rajamangala University of Technology Suvarnabhumi</p>
+                <p>คณะ วิทยาศาสตร์และเทคโนโลยี สาขา วิทยาการคอมพิวเตอร์</p>
+                <p>Computer Science and Technology</p>
+                <section class="download-section">
+                    <a href="/resume_file/resume_solrawit.pdf" class="btn-download" download>
+                        Download PDF Resume
+                    </a>
+                    <a href="/component/cert.html" class="btn-download" view>
+                        View Certificate
+                    </a>
+                </section>
+            </div>
+        </section>
+
+        <section class="info-sections">
+            <div class="info-box">
+                <h2>เกี่ยวกับฉัน</h2>
+                <p>&#9679; กำลังมองหาสถานที่ฝึกงานสหกิจศึกษา ช่วง พ.ย. - มี.ค. เป็นเวลา 4 เดือน พร้อมที่จะรับความรู้ภาษาโปรแกรมใหม่ๆ ประสบการณ์การในการทำงานเพื่อนำความรู้ไปต่อยอดและพัฒนาตัวเองและความสามารถทำงานเป็นทีมได้ดียิ่งขึ้น</p>
+            </div>
+            <div class="info-box">
+                <h2>Contact</h2>
+                <ul>
+                    <li>&#9679; เบอร์โทร: 099-219-1379</li>
+                    <li>&#9679; อีเมล์: c.solrawit@gmail.com</li>
+                    <li>&#9679; GitHub: <a href="https://github.com/solrawit">github.com/solrawit</a></li>
+                    <li>&#9679; LINE: solrawit</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h2>ประสบการ์ณการทำงาน</h2>
+                <ul>
+                    <li>&#9679; MAY - JULY 2017: TOT Public Company Limited</li>
+                    <li>บริษัท ทีโอที จํากัด (มหาชน)</li>
+                    <li>&#9679; 2024: PROJECT FOR UNIVERSITY - Medication reminder system through the LINE application</li>
+                    <li>เว็บแอพพลิเคชัน OCR แจ้งเตือนการรับประทานยาผ่านแอพพลิเคชัน LINE</li>
+                    <li>ตัวอย่างเว็บไซต์: <a href="http://medicrmut.ddns.net">medicrmut.ddns.net</a></li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h2>Skills <i class="fa-solid fa-code"></i></h2>
+                <ul>
+                    <li>&#9679; HTML</li>
+                    <li>&#9679; CSS</li>
+                    <li>&#9679; JavaScript</li>
+                    <li>&#9679; PHP</li>
+                    <li>&#9662; ปัจจุบันกำลังศึกษาเรื่อง</li>
+                    <li>React , Vue.js</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h2>Framework & Library</h2>
+                <ul>
+                    <li>&#9679; Bootstrap</li>
+                    <li>&#9679; FontAwesome</li>
+                    <li>&#9662; ปัจจุบันกำลังศึกษาเรื่อง</li>
+                    <li> Vuetify , Tailwind </li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h2>Tools & Programs</h2>
+                <ul>
+                    <li>&#9679; GitHub</li>
+                    <li>&#9679; HeidiSQL</li>
+                    <li>&#9679; XAMPP</li>
+                    <li>&#9679; Photoshop</li>
+                    <li>&#9679; FileZilla</li>
+                    <li>&#9679; FileZilla Server</li>
+                    <li>&#9679; Sequel Pro (FOR MAC OS)</li>
+                    <li>&#9679; Word, Excel, PowerPoint</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer -->
+    <footer>
+        <p>&copy; Copyright 2024 Website By Solrawit All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Load the navbar
+        fetch('/component/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
