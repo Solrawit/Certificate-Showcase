@@ -2,7 +2,7 @@
 .about-intro {
     text-align: center;
     padding: 60px 20px;
-    background: #f7f9fc;
+    background: #ffffff;
     border-bottom: 5px solid #007bff; /* เพิ่มเส้นขอบด้านล่าง */
     transition: background-color 0.3s ease;
 }
@@ -138,7 +138,7 @@ footer:hover::before {
     padding: 15px 30px;
     font-size: 1.2em;
     color: #fff;
-    background-color: #007bff;
+    background-color: #2b2b2b;
     border: none;
     border-radius: 8px;
     text-decoration: none;
@@ -146,10 +146,10 @@ footer:hover::before {
 }
 
 .btn-download:hover {
-    background-color: #0056b3;
+    background-color: #000000;
     transform: scale(1.05);
 }
 
 .btn-download:active {
-    background-color: #004494;
+    background-color: #000000;
 }
