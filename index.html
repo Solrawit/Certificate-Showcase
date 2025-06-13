@@ -1,138 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's Solrawit</title>
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="/assets/navbar.css">
-    <link rel="stylesheet" href="/assets/about.css">
-    <style>
-       /* Background container */
-.background {
-    background-image: url('/image/codebg2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    filter: blur(6px); /* Apply blur effect to the background */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1; /* Set background behind the content */
-    height: 100vh;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="/image/favicon.ico" type="image/x-icon" />
 
-/* Foreground content */
-.content {
-    position: relative;
-    z-index: 1; /* Set content above the background */
-    padding: 20px;
-}
+  <!-- Load Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
+  <title>RESUME FOR SOLRAWIT</title>
+  <style>
+    /* (เหมือนเดิมทั้งหมด) */
+    /* Reset & Font */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-    </style>
+    body {
+      color: #f0f0f0;
+      background: #0f0f0f;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Background effect */
+    .background {
+      background: url('/image/codebg2.jpg') center/cover fixed no-repeat;
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      filter: brightness(0.4) blur(4px);
+    }
+
+    /* Glassmorphism content area */
+    main {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* About intro */
+    .about-intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .about-intro img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .about-intro img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-intro h1 {
+      font-size: 2rem;
+      color: #00ffff;
+      animation: slideInLeft 0.8s ease;
+    }
+
+    .about-intro h2,
+    .about-intro h3 {
+      color: #ffffff;
+    }
+
+    .download-section {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-download {
+      background: linear-gradient(145deg, #1e90ff, #00ced1);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-download:hover {
+      background: linear-gradient(145deg, #00bfff, #20b2aa);
+      transform: scale(1.05);
+    }
+
+    /* Info sections */
+    .info-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .info-box {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      transition: transform 0.3s;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-box h2 {
+      color: #7df9ff;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .info-box ul {
+      list-style: none;
+    }
+
+    .info-box li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .info-box li::before {
+      content: "•";
+      color: #00ffff;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Full-width section (about me) */
+    .full-width {
+      grid-column: span 2;
+    }
+
+    /* Link color */
+    a {
+      color: #cc83df;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #00ffff;
+    }
+
+    @media (max-width: 700px) {
+      .full-width {
+        grid-column: span 1;
+      }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    /* Animation keyframes */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 600px) {
+      .about-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .btn-download {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Include navbar -->
-    <header id="navbar-container"></header>
-    <div class="background"></div>
-    <main>
-        <section class="about-intro">
-            <img src="/image/profile.jpg" alt="imgprofile">
-            <h1>My Profile &#9658;</h1>
-            <div>
-                <h2>Solrawit Chungchoo</h2>
-                <h3>นาย สรวิชญ์ ช่วงชู</h3>
-                <p>มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</p>
-                <p>Rajamangala University of Technology Suvarnabhumi</p>
-                <p>คณะ วิทยาศาสตร์และเทคโนโลยี สาขา วิทยาการคอมพิวเตอร์</p>
-                <p>Computer Science and Technology</p>
-                <section class="download-section">
-                    <a href="/resume_file/resume_solrawit.pdf" class="btn-download" download>
-                        Download PDF Resume
-                    </a>
-                    <a href="/component/cert.html" class="btn-download" view>
-                        View Certificate
-                    </a>
-                </section>
-            </div>
+  <header id="navbar-container"></header>
+  <div class="background"></div>
+  <main>
+    <section class="about-intro">
+      <img src="/image/profile2.jpg" alt="imgprofile" />
+      <h1>My Profile &#9658;</h1>
+      <div>
+        <h2>Solrawit Chungchoo</h2>
+        <h3>นาย สรวิชญ์ ช่วงชู</h3>
+        <p>มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</p>
+        <p>Rajamangala University of Technology Suvarnabhumi</p>
+        <p>คณะ วิทยาศาสตร์และเทคโนโลยี สาขา วิทยาการคอมพิวเตอร์</p>
+        <p>Computer Science and Technology</p>
+        <section class="download-section">
+          <a href="/resume_file/resume_solrawit.pdf" class="btn-download" download>
+            Download PDF Resume
+          </a>
+          <a href="/component/cert.html" class="btn-download" view>
+            View Certificate
+          </a>
         </section>
+      </div>
+    </section>
 
-        <section class="info-sections">
-            <div class="info-box">
-                <h2>เกี่ยวกับฉัน</h2>
-                <p>&#9679; กำลังมองหาสถานที่ฝึกงานสหกิจศึกษา ช่วง พ.ย. - มี.ค. เป็นเวลา 4 เดือน พร้อมที่จะรับความรู้ภาษาโปรแกรมใหม่ๆ ประสบการณ์การในการทำงานเพื่อนำความรู้ไปต่อยอดและพัฒนาตัวเองและความสามารถทำงานเป็นทีมได้ดียิ่งขึ้น</p>
-            </div>
-            <div class="info-box">
-                <h2>Contact</h2>
-                <ul>
-                    <li>&#9679; เบอร์โทร: 099-219-1379</li>
-                    <li>&#9679; อีเมล์: c.solrawit@gmail.com</li>
-                    <li>&#9679; GitHub: <a href="https://github.com/solrawit" target="_blank">github.com/solrawit</a></li>
-                    <li>&#9679; LINE: solrawit</li>
-                </ul>
-            </div>
-            <div class="info-box">
-                <h2>ประสบการ์ณการทำงาน</h2>
-                <ul>
-                    <li>&#9679; MAY - JULY 2017: TOT Public Company Limited</li>
-                    <li>บริษัท ทีโอที จํากัด (มหาชน)</li>
-                    <li>&#9679; 2024: PROJECT FOR UNIVERSITY - Medication reminder system through the LINE application</li>
-                    <li>เว็บแอพพลิเคชัน OCR แจ้งเตือนการรับประทานยาผ่านแอพพลิเคชัน LINE</li>
-                    <li>ตัวอย่างเว็บไซต์: <a href="http://medicrmut.ddns.net" target="_blank">medicrmut.ddns.net</a></li>
-                </ul>
-            </div>
-            <div class="info-box">
-                <h2>Skills <i class="fa-solid fa-code"></i></h2>
-                <ul>
-                    <li>&#9679; HTML</li>
-                    <li>&#9679; CSS</li>
-                    <li>&#9679; JavaScript</li>
-                    <li>&#9679; PHP</li>
-                    <li>&#9662; ปัจจุบันกำลังศึกษาเรื่อง</li>
-                    <li>React , Vue.js</li>
-                </ul>
-            </div>
-            <div class="info-box">
-                <h2>Framework & Library</h2>
-                <ul>
-                    <li>&#9679; Bootstrap</li>
-                    <li>&#9679; FontAwesome</li>
-                    <li>&#9662; ปัจจุบันกำลังศึกษาเรื่อง</li>
-                    <li> Vuetify , Tailwind </li>
-                </ul>
-            </div>
-            <div class="info-box">
-                <h2>Tools & Programs</h2>
-                <ul>
-                    <li>&#9679; Figma</li>
-                    <li>&#9679; GitHub</li>
-                    <li>&#9679; HeidiSQL</li>
-                    <li>&#9679; XAMPP</li>
-                    <li>&#9679; Photoshop</li>
-                    <li>&#9679; FileZilla</li>
-                    <li>&#9679; FileZilla Server</li>
-                    <li>&#9679; Sequel Pro (FOR MAC OS)</li>
-                    <li>&#9679; Word, Excel, PowerPoint</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+    <section class="info-sections">
+  <div class="info-box full-width">
+    <h2><i class="fas fa-user"></i> เกี่ยวกับฉัน</h2>
+    <p>&#9679; สวัสดีครับผมนาย สรวิชญ์ ช่วงชู อายุ 23ปี มีความสนใจในสายงานWeb Developerกำลังมองหาสถานที่ทำงาน(First Jobber) พร้อมที่จะรับความรู้ภาษาโปรแกรมใหม่ๆ และประสบการณ์การใหม่ในการทำงานเพื่อนำความรู้ไปต่อยอดและพัฒนาองค์กรยิ่งๆขึ้นไป</p>
+  </div>
+  <div class="info-box">
+    <h2><i class="fas fa-address-book"></i> Contact</h2>
+    <ul>
+      <li><i class="fas fa-phone"></i> Phone: 099-219-1379</li>
+      <li><i class="fas fa-envelope"></i> Email: c.solrawit@gmail.com</li>
+      <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/solrawit" target="_blank" rel="noopener noreferrer">github.com/solrawit</a></li>
+      <li><i class="fas fa-comment"></i> LINE: solrawit</li>
+    </ul>
+  </div>
+  <div class="info-box">
+    <h2><i class="fas fa-briefcase"></i> ประสบการณ์การทำงาน</h2>
+    <ul>
+      <li>&#9679; MAY - JULY 2017: TOT Public Company Limited</li>
+      <li>บริษัท ทีโอที จํากัด (มหาชน)</li>
+      <li>&#9679; SUMMER 2023: Part Time พนักงาน บริษัท C.J. Express Group</li>
+      <li>&#9679; 2024: PROJECT FOR UNIVERSITY - Medication reminder system through the LINE application System.</li>
+      <li>ระบบเว็บแอพพลิเคชัน OCR แจ้งเตือนการรับประทานยาผ่านแอพพลิเคชัน LINE พัฒนาโดยใช้ AI Tesseract OCR Engine</li>
+      <li>ตัวอย่างเว็บไซต์: <a href="http://medicrmut.ddns.net" target="_blank" rel="noopener noreferrer">medicrmut.ddns.net</a></li>
+      <li>&#9679; 2025: Jobintern  เว็บไซต์แสดงสินค้าและบริการการขาย พร้อมการจัดการฐานข้อมูลและคำแนะนำการบริการ. ได้รับรางวัลโครงงานสหกิจศึกษาอันดับที่ 1</li>
+      <li>ตัวอย่างเว็บไซต์: <a href="http://grandmaplelove.com" target="_blank" rel="noopener noreferrer">grandmaplelove.com</a></li>
+    </ul>
+  </div>
+  <div class="info-box">
+    <h2><i class="fas fa-code"></i> Skills</h2>
+    <ul>
+      <li>&#9679; HTML</li>
+      <li>&#9679; CSS</li>
+      <li>&#9679; JavaScript</li>
+      <li>&#9679; PHP</li>
+      <li>&#9662; ปัจจุบันกำลังศึกษาเรื่อง</li>
+      <li>React , Vue.js</li>
+    </ul>
+  </div>
+  <div class="info-box">
+    <h2><i class="fas fa-layer-group"></i> Framework & Library</h2>
+    <ul>
+      <li>&#9679; React Toastify</li>
+      <li>&#9679; Leaflet Map</li>
+      <li>&#9679; Splide.js</li>
+      <li>&#9679; AOS (Anime on scroll)</li>
+      <li>&#9679; Sweetalert</li>
+      <li>&#9679; Bootstrap</li>
+      <li>&#9679; FontAwesome</li>
+      <li>&#9662; ปัจจุบันกำลังศึกษาเรื่อง</li>
+      <li>Vuetify , Tailwind</li>
+    </ul>
+  </div>
+  <div class="info-box">
+    <h2><i class="fas fa-tools"></i> Tools & Programs</h2>
+    <ul>
+      <li>&#9679; Apache Jmeter</li>
+      <li>&#9679; Ngrok</li>
+      <li>&#9679; Figma</li>
+      <li>&#9679; GitHub & Git Desktop</li>
+      <li>&#9679; HeidiSQL</li>
+      <li>&#9679; XAMPP SERVER</li>
+      <li>&#9679; MAMP SERVER</li>
+      <li>&#9679; Photoshop</li>
+      <li>&#9679; FileZilla</li>
+      <li>&#9679; FileZilla Server</li>
+      <li>&#9679; Sequel Pro (FOR MAC OS)</li>
+      <li>&#9679; Word, Excel, PowerPoint</li>
+    </ul>
+  </div>
+</section>
+  </main>
 
-    <!-- Include footer -->
-    <footer>
-        <p>&copy; Copyright 2024 Website By Solrawit All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // Load the navbar
-        fetch('/component/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-container').innerHTML = data;
-            });
-    </script>
+  <footer>
+    <p>&copy; Copyright 2024 Website By Solrawit All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
