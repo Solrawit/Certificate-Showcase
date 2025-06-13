@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+    color: #333;
+    min-height: 100vh; /* ให้แน่ใจว่าร่างกายเต็มความสูง */
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* เพิ่มขนาดของหัวข้อใน header */
+}
+
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+    flex: 1; /* ให้แน่ใจว่า main ขยายเต็มพื้นที่ระหว่าง header และ footer */
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* เพิ่มขนาดขั้นต่ำ */
+    gap: 30px;
+}
+
+.certificate {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px; /* ขนาด padding */
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* ความเข้มของเงา */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate:hover {
+    transform: scale(1.07); /* ขยายขนาดเมื่อโฮเวอร์ */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* เพิ่มความเข้มของเงาเมื่อโฮเวอร์ */
+}
+
+.certificate h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.8em; /* ขนาดของหัวข้อในการ์ด */
+}
+
+.certificate-image {
+    margin: 20px 0;
+}
+
+.certificate-image img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #007bff; /* ขนาดของกรอบภาพ */
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.certificate-image img:hover {
+    border-color: #0056b3; /* เปลี่ยนสีกรอบเมื่อโฮเวอร์ */
+}
+
+p {
+    font-size: 1.2em; /* ขนาดของข้อความในการ์ด */
+    color: #666;
+}
+
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* เพิ่ม padding ให้ footer */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0; /* กำจัด margin ของข้อความใน footer */
+    font-size: 1em; /* ขนาดของข้อความใน footer */
+    color: white;
+}
